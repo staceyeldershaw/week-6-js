@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<body>
+    <h3>7. How to ask the user for input</h3>
+</body>
+<p>
+    7a.Find out how to use the prompt() function in JavaScript.
+    <br>
+    <br>
+    The prompt() function is used to display a window dialog box.
+    It displays a prompt box that asks the user to input value.
+    The prompt() function returns the value entered by the user. Otherwise NULL is returned.<br>
+    Syntax would be let user = prompt ("message", "default value");
+</p>
+<br>
+<p>
+    <strong>Example:</strong>
+    <br>
+    <code>
+        let person = prompt("what is your name?", "John Doe")
+        console.log(person);
+        </code>
+</p>
+<p> Click button to demonstrate the prompt() function.</p>
+<button onclick=myFunction()> Click Me!</button>
+<p id="output"></p>
+<script>
+    function myFunction() {
+        let person = prompt("what is your name?", "John Doe");
+        document.getElementById("output").innerHTML = person;
+        if (person != null) {
+            document.getElementById("output").innerHTML =
+                "Hello " + person + "! How are you today?";
+            console.log(person);
+        }
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<body>
+    <h3>7b. Apply your learning to any of the three previous activities.</h3>
+</body>
+<p>
+    <br>
+    <br>
+    <strong>Exercise 5 - Example Code:</strong>
+    let password = 'thisismypassword';
+    let expectedpassword = 'thisismypassword';
+    if (password === expectedpassword) {
+    console.log('Access Granted')
+    }
+    else {
+    console.log('Access Denied')
+    }
+    <br>
+    <br>
+    <strong>Applied prompt() to Example Code:</strong>
+</p>
+<br>
+<p> Click button to demonstrate the prompt() function.</p>
+<button onclick=myFunction()> Click Me!</button>
+<p id="output"></p>
+<script>
+    function myFunction() {
+        let password = prompt("Enter your password:");
+        let expectedpassword = "thisismypassword";
+        document.getElementById("output").innerHTML = password === expectedpassword ? "Access Granted" : "Access Denied";
+        console.log("expectedpassword: " + password);
+    }
+</script>
+
+</html>

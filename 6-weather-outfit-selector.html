@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<body>
+    <h3>6. Weather Outfit Selector</h3>
+
+    <p>
+        Create a script that suggests what to wear based on the weather. You input a temperature, and the script tells
+        you what to wear.
+        <br>
+        You should have a form with a text input field and a button. When the button is clicked, the script should
+        suggest what to wear based on the temperature.
+        For example, if it's cold (under 15 degrees), suggest wearing a jacket. If it's warm, but not hot (between 15
+        and 25 degrees), suggest a jumper. if it's hot (above 25 degrees), suggest shorts.
+        <br>
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <form id="Weatherform">
+                    <label for="temperature"> Enter Temperature (°C):</label>
+                    <input type="number" id="temperature" required>
+                    <button type="button" onclick="suggestWeather()">Submit</button>
+                </form>
+            </td>
+            <td>
+                <p id="output"></p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function suggestWeather() {
+            let temperature = document.getElementById("Weatherform").
+                temperature.value = parseFloat(document.getElementById("temperature").value);
+            let output = document.getElementById("output");
+            if (temperature < 15) {
+                output.innerHTML = "It's cold.🥶 - Wear a jacket.";
+            } else if (temperature >= 15 && temperature <= 25) {
+                output.innerHTML = "It's warm.😌 - Wear a jumper.";
+            } else {
+                output.innerHTML = "It's hot.🥵 - Wear shorts.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

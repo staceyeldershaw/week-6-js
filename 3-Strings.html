@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<body>
+    <h3>3. STRINGS</h3>
+    <p> 3.1-Find out about the "string concatenation operator +" in Javascript.
+        <br>
+        3.2-Demonstrate concatenating a string with a string. Print the output to the console if possible.
+        <br>
+        3.3-Demonstrate concatenating a string with a number. Print the output to the console if possible.
+        <br>
+        3.4-Demonstrate concatenating a number with a string. Print the output to the console if possible.
+        <br>
+        3.5-Find out about "string interpolation" in Javascript.
+        <br>
+        3.6-Demonstrate string interpolation. Interpolate a string with a variable that stores a number.
+        Print the output to the console if possible.
+    </p>
+    <br>
+    <br>
+    <h3>ANSWERS</h3>
+    <p>
+        3.1 - <b>STRING CONCATENATNG</b> - The numbers (in an arithmetic operation) are called operands.
+        The operation (to be performed between the two operands) is defined
+        by an operator.
+        The + operator concatenates (adds) strings.
+    </p>
+    <br>
+    <p>
+        3.2 -<b>Demonstrate concatenating a string with a string.</b><br>
+        let firstName = "John";
+        let lastName = "Doe";
+        let fullName = firstName + " " + lastName;
+        console.log(fullName);
+        
+    </p>
+    <script>
+        let firstName = "John";
+        let lastName = "Doe";
+        let fullName = firstName + " " + lastName;
+        console.log(fullName);
+    </script>
+    <p>
+        3.3 - <b>Demonstrate concatenating a string with a number.</b> <br>
+        let OutsideTemperature = "19 degrees";
+        let weathertype = "sunny";
+        let myage = Iam + " " + age;
+        console.log(myage);
+        
+    </p>
+    <script>
+        let iam = "Iam";
+        let age = "32";
+        let myage = iam + " " + age;
+        console.log(myage);
+    </script>
+    <p>
+        3.4 - <b>Demonstrate concatenating a number with a string.</b><br>
+        let OutsideTemperature = "19 degrees";
+        let weathertype = "cloudy";
+        let todayweather = OutsideTemperature + " " + weathertype;
+        console.log(todayweather);
+        
+    </p>
+    <script>
+        let OutsideTemperature = "19 degrees";
+        let weathertype = "cloudy";
+        let todayweather = OutsideTemperature + " " + weathertype;
+        console.log(todayweather);
+    </script>
+    <p>
+        3.5 - <b>STRING INTERPOLATION</b> -String interpolation is a way to build strings by
+        inserting variables or expressions directly into a string,instead of concatenating them with the + operator.
+        In JavaScript, this is done using template literals, which are strings wrapped in backticks (` `) rather than
+        quotes. You place variables inside ${ }.
+
+    </p>
+
+    <p>
+        3.6 -<b> Demonstrate string interpolation.<br>
+            Interpolate a string with a variable that stores a number.</b><br>
+        let carBrand = "Toyota";
+        let carModel = "Corolla";
+        let carYear = 2020;
+
+        console.log(`I drive a ${carYear} ${carBrand} ${carModel}.`);
+        <br> Output: I drive a 2020 Toyota Corolla.
+        <script>
+            let carBrand = "Toyota";
+            let carModel = "Corolla";
+            let carYear = 2020;
+            console.log(`I drive a ${carYear} ${carBrand} ${carModel}.`);
+        </script>
+    </p>
+    
+</body>
+
+</html>
