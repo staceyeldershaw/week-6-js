@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<body>
+    <h3>11. Weight Converter</h3>
+
+    <p>
+        Your best friend from England, Sir Vortex Throckmorton, is visiting. You're cooking a meal together.
+        As he uses different units than you (pounds instead of kilograms), you write a small program to help
+        you communicate.
+        Write two functions: one to convert imperial pounds to kilograms and another to convert kilograms to imperial pounds.
+        Each function should take one parameter (the weight) and return the converted value.
+        The formula for that is: `kilograms = pounds / 2.2` and `pounds = kilograms * 2.2`
+        Example call:
+        ```
+        console.log(kilosToPounds(10)); // should log `22`
+        ```
+        Convert all these values:
+        12 pounds
+        14 pounds
+        0 pounds
+        -5 pounds
+        1 kilo
+        0.512 kilos
+        2342324323 kilos
+    </p>
+    <br>
+    <script>
+        function poundsToKilos (pounds) {
+            return pounds / 2.2;
+        }
+
+        function kilosToPounds (kilos) {
+            return kilos * 2.2;
+        }
+
+        //Pounds to Kilos
+        console.log(poundsToKilos(12)); // 5.454545454545454
+        console.log(poundsToKilos(14)); // 6.363636363636363
+        console.log(poundsToKilos(0)); // 0
+        console.log(poundsToKilos(-5)); // -2.2727272727272725
+
+        //Kilos to Pounds
+        console.log(kilosToPounds(1)); // 2.2
+        console.log(kilosToPounds(0.512)); // 1.1264
+        console.log(kilosToPounds(2342324323)); // 5153113510.6
+    </script>
+</body>
+</html>
