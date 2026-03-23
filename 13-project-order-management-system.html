@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<body>
+    <h3>13. Project Order Management System</h3>
+
+    <p>
+        Project: Order Management System
+            You are building a simple order management system for a small online store. The system needs to handle different types of products and calculate the final price based on specific conditions.
+            We'll build a frontend for this project in the coming weeks. For now, we'll focus on JavaScript.
+            Create a function `calculatePrice`
+            The function should take three arguments: `productType`, `quantity`, and `isMember`.
+            - `productType` will be a string representing the type of product (e.g., "electronics", "clothing", "grocery").
+            - `quantity` will be an integer representing the number of items.
+            - `isMember` will be a boolean indicating whether the customer is a store member (true/false).
+            Set up base prices:
+            - Electronics: $100 per item
+            - Clothing: $50 per item
+            - Grocery: $20 per item
+            Apply discounts and conditions:
+            - If the customer is a member, apply a 10% discount on the total price.
+            - If the customer buys more than 5 items of any product type, apply an additional 5% discount on the total price.
+            - Ensure that the discounts are applied in the correct order (first membership discount, then bulk discount).
+            Return the final price: The function should return the final price as a number.
+            ### Example Outputs
+            - `calculatePrice("electronics", 3, true)` should return `270` (300 - 10% discount).
+            - `calculatePrice("clothing", 6, false)` should return `285` (300 - 5% discount).
+            - `calculatePrice("grocery", 7, true)` should return `119` (140 - 10% discount - 5% discount).
+            ### Bonus Challenge
+            Modify the function to add a special promotion: if the total price after discounts exceeds $500, apply a $50 discount.
+    </p>
+    <br>
+    <script>
+        function calculatePrice(productType, quantity, isMember) {
+  const prices = {
+    electronics: 100,
+    clothing: 50,
+    grocery: 20
+  };
+
+  if (!prices[productType]) {
+    console.log("Invalid product type");
+    return 0;
+  }
+
+  let total = prices[productType] * quantity;
+
+  if (isMember) total *= 0.9;
+  if (quantity > 5) total *= 0.95;
+  if (total > 500) total -= 50;
+
+  return Math.round(total);
+}
+        console.log(calculatePrice("electronics", 3, true));  // 270
+        console.log(calculatePrice("clothing", 6, false));    // 285
+        console.log(calculatePrice("grocery", 7, true));      // 120 (rounded)
+    </script>
