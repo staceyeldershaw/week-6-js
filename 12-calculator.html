@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<body>
+    <h3>12. Calculator</h3>
+
+    <p>
+        ## 12. Calculator
+        Take your first activity, the math wizard, and re-write it to use only one function:
+        ```
+        function calculate(num1, num2, operator) {
+        }
+        ```
+    </p>
+    <br>
+    <script>
+        function calculate(num1, num2, operator) {
+            if (operator === "+") return num1 + num2;
+            if (operator === "-") return num1 - num2;
+            if (operator === "*") return num1 * num2;
+            if (operator === "/") return num1 / num2;
+        }
+        
+        console.log(calculate(3, 5, "+")); // 8
+        console.log(calculate(3, 5, "-")); // -2
+        console.log(calculate(3, 5, "*")); // 15
+        console.log(calculate(3, 5, "/")); //0.6
+    </script>
